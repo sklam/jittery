@@ -1,4 +1,5 @@
 from jittery.core import translate
+from jittery import core2
 from prettyprinter import pprint
 
 def foo(x):
@@ -24,21 +25,21 @@ def foo(x):
                         break
     return x
 
-# def foo(x):
-#     y = 0
-#     if x > 3:
-#         y = 1
-#     elif x < 3:
-#         y = 2
-#     else:
-#         y = 3
+def foo(x):
+    y = 0
+    if x > 3:
+        y = 1
+    elif x < 3:
+        y = 2
+    else:
+        y = 3
 
-#     if y == 1:
-#         x = 3
-#     else:
-#         x = 4
+    if y == 1:
+        x = 3
+    else:
+        x = 4
 
-#     return x, y
+    return x, y
 
 def foo(x):
     if 4 > x > 1:
@@ -60,6 +61,13 @@ def foo(x):
     return x
 
 
+# def foo(x):
+#     c = 0
+#     for i in range(x):
+#         c += i
+#     return c
 
-interests = translate(foo.__code__)
-pprint(interests)
+# interests = translate(foo.__code__)
+# pprint(interests)
+
+core2.translate(foo.__code__)

@@ -1,4 +1,4 @@
-# Jittery --- A Jit Nusery
+# Jittery --- A Jit Nursery
 
 - Extract CFG interest points from Python bytecode CFG 
     
